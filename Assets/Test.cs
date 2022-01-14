@@ -6,10 +6,7 @@ sealed class Test : MonoBehaviour
 
     void Start()
     {
-        var size = (System.UIntPtr)_source.bytes.Length;
-        Qoi.Header header;
-        Qoi.Plugin.read_header(_source.bytes, size, out header);
-
+        var header = Qoi.Plugin.ReadHeader(_source.bytes);
         Debug.Log($"{header.width} x {header.height}");
     }
 }

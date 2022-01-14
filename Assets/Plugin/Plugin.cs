@@ -20,6 +20,14 @@ public static class Plugin
     const string _dll = "qoi";
     #endif
 
+    public static Header ReadHeader(byte[] data)
+    {
+        var size = (System.UIntPtr)data.Length;
+        Qoi.Header header;
+        read_header(data, size, out header);
+        return header;
+    }
+
     [DllImport(_dll)]
     public static extern void read_header
       ([In] byte[] data, System.UIntPtr size, out Header header);
