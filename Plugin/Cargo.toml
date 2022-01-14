@@ -1,0 +1,11 @@
+[package]
+name = "unity-qoi"
+version = "0.1.0"
+authors = ["Keijiro Takahashi <keijiro@gmail.com>"]
+
+[lib]
+name = "qoi"
+crate-type = ["cdylib"]
+
+[dependencies]
+rapid-qoi = "0.5.5"
