@@ -5,7 +5,6 @@ namespace Qoi {
 
 public enum Colors { Srgb, SrgbLinA, Rgb, Rgba }
 
-[StructLayout(LayoutKind.Sequential)]
 public struct Header
 {
     public uint width;
